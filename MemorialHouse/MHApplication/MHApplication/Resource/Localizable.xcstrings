@@ -1,17 +1,6 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
-    "ex) 영현" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Princess"
-          }
-        }
-      }
-    },
     "UserName 기록소" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -95,6 +84,28 @@
         }
       }
     },
+    "동영상 선택" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Video"
+          }
+        }
+      }
+    },
+    "동영상 업로드" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload Video"
+          }
+        }
+      }
+    },
     "뒤로" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -150,6 +161,17 @@
         }
       }
     },
+    "사진 편집" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Photo"
+          }
+        }
+      }
+    },
     "서비스 이용 약관" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -168,6 +190,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setting"
+          }
+        }
+      }
+    },
+    "소리 기록" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Audio"
           }
         }
       }
@@ -245,6 +278,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Do you want to cancel writing?"
+          }
+        }
+      }
+    },
+    "저장" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
           }
         }
       }
@@ -392,6 +436,17 @@
         }
       }
     },
+    "추가" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
     "추억을 간직할" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -432,6 +487,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please select category"
+          }
+        }
+      }
+    },
+    "캡션을 입력해주세요." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please Enter Caption."
           }
         }
       }
