@@ -271,6 +271,17 @@
         }
       }
     },
+    "책 삭제" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove Book"
+          }
+        }
+      }
+    },
     "책 색상 | " : {
       "extractionState" : "manual",
       "localizations" : {
@@ -322,6 +333,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plase Enter Book Title"
+          }
+        }
+      }
+    },
+    "책 커버 수정" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Book"
           }
         }
       }
