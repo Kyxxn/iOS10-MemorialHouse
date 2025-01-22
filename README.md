@@ -63,19 +63,6 @@
 
 ##
 
-### 🔥 우리 팀의 기술적 도전
-
-#### 1. 사진 - [[Phots] 이미지 편집하기](https://kyxxn.notion.site/Photos-9d24b4b1f8d64d809adb946d0543e829?pvs=4)
-
-#### 2. 동영상 - [[AVKit] 내 앨범의 비디오를 업로드하기](https://kyxxn.notion.site/AVKit-1519adb3262680769a14e9dc908400e3?pvs=4)
-
-#### 3. 오디오 - [[AVFAudio] 녹음해서 오디오를 업로드하기](https://kyxxn.notion.site/AVFAudio-1519adb3262680bf84f5dedb7995041d?pvs=4)
-
-#### 4. 멀티 미디어를 담고 있는 TextView 저장하기 - [스냅샷 기반 저장하기](https://kyxxn.notion.site/a8d455af87164a02aa5e4d79e5b3fc92?pvs=4)
-
-
-##
-
 ### 🧑‍🧑‍🧒‍🧒 집주인들
 
 <div align="center">
