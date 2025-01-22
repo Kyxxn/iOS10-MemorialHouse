@@ -73,6 +73,17 @@
         }
       }
     },
+    "닫기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "뒤로" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -84,6 +95,28 @@
         }
       }
     },
+    "베이지" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beige"
+          }
+        }
+      }
+    },
+    "분 홍" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pink"
+          }
+        }
+      }
+    },
     "불편신고 및 개선요청" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -91,6 +124,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Report Issues and Request Improvements"
+          }
+        }
+      }
+    },
+    "사진 선택" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Photo"
           }
         }
       }
@@ -113,6 +157,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setting"
+          }
+        }
+      }
+    },
+    "수정" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
           }
         }
       }
@@ -161,6 +216,116 @@
         }
       }
     },
+    "주 황" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orange"
+          }
+        }
+      }
+    },
+    "책 색상 | " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book Color | "
+          }
+        }
+      }
+    },
+    "책 속지 만들기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Book"
+          }
+        }
+      }
+    },
+    "책 제목 | " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book Title | "
+          }
+        }
+      }
+    },
+    "책 제목을 입력하세요" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the book title"
+          }
+        }
+      }
+    },
+    "책 제목을 입력해주세요" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plase Enter Book Title"
+          }
+        }
+      }
+    },
+    "책 표지 만들기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cretae Book Cover"
+          }
+        }
+      }
+    },
+    "책 표지 생성 실패" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fail: Create Book Cover"
+          }
+        }
+      }
+    },
+    "책 표지 수정" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Book Cover Edit"
+          }
+        }
+      }
+    },
+    "초 록" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Green"
+          }
+        }
+      }
+    },
     "추억을 간직할" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -168,6 +333,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Create a name for"
+          }
+        }
+      }
+    },
+    "카테고리 | " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category |"
+          }
+        }
+      }
+    },
+    "카테고리를 선택해주세요" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select category"
+          }
+        }
+      }
+    },
+    "파 랑" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blue"
+          }
+        }
+      }
+    },
+    "확인" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
