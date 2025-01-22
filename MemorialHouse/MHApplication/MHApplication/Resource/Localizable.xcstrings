@@ -29,6 +29,17 @@
         }
       }
     },
+    "개인정보 처리 방침" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
     "기록소" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -62,6 +73,61 @@
         }
       }
     },
+    "뒤로" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "불편신고 및 개선요청" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Report Issues and Request Improvements"
+          }
+        }
+      }
+    },
+    "서비스 이용 약관" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        }
+      }
+    },
+    "설정" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting"
+          }
+        }
+      }
+    },
+    "앱 버전" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Version"
+          }
+        }
+      }
+    },
     "완료" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -69,6 +135,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finish"
+          }
+        }
+      }
+    },
+    "자주 묻는 질문 (FAQ)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frequently Asked Questions (FAQ)"
           }
         }
       }
