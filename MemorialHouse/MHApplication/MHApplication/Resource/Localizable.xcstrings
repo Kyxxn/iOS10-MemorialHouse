@@ -12,6 +12,23 @@
         }
       }
     },
+    "UserName 기록소" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ House"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 기록소"
+          }
+        }
+      }
+    },
     "기록소" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -52,6 +69,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finish"
+          }
+        }
+      }
+    },
+    "전체" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
           }
         }
       }
