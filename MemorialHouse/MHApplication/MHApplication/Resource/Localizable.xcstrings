@@ -40,6 +40,17 @@
         }
       }
     },
+    "기록 마치기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish Writing"
+          }
+        }
+      }
+    },
     "기록소" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -172,6 +183,17 @@
         }
       }
     },
+    "수정 마치기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finish Edit"
+          }
+        }
+      }
+    },
     "앱 버전" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -201,6 +223,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frequently Asked Questions (FAQ)"
+          }
+        }
+      }
+    },
+    "작성 중인 내용은 저장되지 않습니다." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The content you are writing will not be saved."
+          }
+        }
+      }
+    },
+    "작성을 취소하시겠습니까?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to cancel writing?"
           }
         }
       }
@@ -337,6 +381,17 @@
         }
       }
     },
+    "취소" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
     "카테고리 | " : {
       "extractionState" : "manual",
       "localizations" : {
@@ -366,6 +421,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blue"
+          }
+        }
+      }
+    },
+    "페이지 추가" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "add Page"
           }
         }
       }
