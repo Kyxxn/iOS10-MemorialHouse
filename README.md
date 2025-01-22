@@ -14,17 +14,15 @@
 
 ## 🍎 기록소 주요 기능
 
-|![image](https://github.com/user-attachments/assets/afac1905-6e51-469c-b4ba-e7a3ba3afa58)|![image](https://github.com/user-attachments/assets/b0428e36-b261-4858-964b-8e90443a1c77)|![image](https://github.com/user-attachments/assets/8b5ec214-dcc1-480e-bfdf-ddd220a199ba)|
-|:-:|:-:|:-:|
-|![image](https://github.com/user-attachments/assets/3d1b7ab7-ed29-44f2-9cb6-6d7e643755da)|![image](https://github.com/user-attachments/assets/00c424f2-7ac8-48c2-ae3b-f1e136ba01a9)|![image](https://github.com/user-attachments/assets/3995011d-be01-4dbf-9498-4d0270ffa6a6)|
-
+<div align="center">
+  <img width="852" alt="image" src="https://github.com/user-attachments/assets/8f9c8f86-7707-4699-bba3-bcf08faf3b82" />
+</div>
 
 ##
 
 ### 🧱 아키텍처
 
 > ### Clean Architecture + MVVM
-
 
 <div align="center">
 
@@ -63,6 +61,116 @@
 
 ##
 
+### 🔥 우리 팀의 기술적 도전
+
+### TextView에 멀티 미디어를 첨부하는 방법
+TextView에 이미지, 비디오, 오디오 첨부하기 위해 다음과 같은 동작을 한다.
+기본적으로 TextView에 NSAttachment를 넣고 싶다면 NSAttachment를 만들고 NSAttributedString으로 변환한 후에 TextView에 반영하면 된다.
+1. 이미지, 혹은 Data를 통해 NSTextAttachment 만들어야 한다.
+   <img width="637" alt="image" src="https://github.com/user-attachments/assets/2915a1e0-a9ba-41b4-82d2-e9eb46869170" />
+2. NSAttributedString의 생성자 파라미터에 Attachment를 넣어준다.
+   <img width="636" alt="image" src="https://github.com/user-attachments/assets/c556b0e9-839a-40cd-8af7-0ff650687baa" />
+3. TextView가 갖고 있는 NSTextStorage에 추가해준다. (또는 TextView써도 됨)
+   <img width="536" alt="image" src="https://github.com/user-attachments/assets/011d5cd2-b1f4-4573-9943-aefb1048b22f" />
+4. TextKit 내부 동작에 의해 NSTextAttachment가 처리되고, TetxtView에 보여지게 된다.
+   <img width="553" alt="image" src="https://github.com/user-attachments/assets/fa466496-6903-427c-af7f-13f0fb279416" />
+이로써 프로젝트 MVP인 텍스트 뷰에 멀티 미디어를 업로드할 수 있었다.
+
+##
+
+### TextView Reload 최적화하기
+
+### 문제상황
+
+TextKit의 동작 방식에는 중요한 특징이 있다.
+컨텐츠 내용이 변경될 때마다 전체 (보이는) 컨텐츠를 다시 그린다는 점이다.
+그러면 위 사진과 같이 사진이나 동영상 같이 무거운 파일이 들어가있다면, 매번 글자가 적힐 때마다 CoreData로부터 다시 가져와서 그려야하는 문제가 발생한다.
+또한, 동영상같은 것을 보고있었다면 동영상이 재생되다가 타자를 치면 처음부터 봐야하는 문제가 생긴다.
+이것은 원래 의도했던 효과가 아니다.
+그래서 이를 해결하고자 `NSTextAttachmentViewProvider`이 뷰를 제공하는 방식에 대해 개선하기로 하였다.
+
+<img width="553" alt="image" src="https://github.com/user-attachments/assets/03bd9b58-4c43-4d76-8925-984bf8267e67" />
+
+위 과정에서 보면 Change Text시 NSTextElement와 그와 관련된 NSTextLayoutFragment도 변하게 된다.
+그리고 TextKit 내부에서는 CoreText와의 상호작용으로 Glyph 처리가 되고, TetxtView에 보여지게 된다.
+
+### 아이디어
+
+`TextStorage`에 담은 게 내부 동작에 의해서라고 표현했는데, `NSTextAttachment` 에는 다음과 같은 메소드가 있다.
+
+``` swift
+func viewProvider(
+    for parentView: UIView?,
+    location: any NSTextLocation,
+    textContainer: NSTextContainer?
+) -> NSTextAttachmentViewProvider? {
+    ...
+}
+```
+
+NSLayoutManager 단계에서 `NSTextAttachment` 가 화면에 표현될 텐데, 이때 위 메소드가 동작해서 `NSTextAttachmentViewProvider`를 반환한다.
+이후 `NSTextAttachmentViewProvider`가 제공하는 view를 받아 이를 NSTextLayoutFragment로 만든다.
+그래서 최종적으로 우리의 TextView에 보여진다.
+
+**그러면, 위 문제를 해결하기 위해 위 메소드를 오버라이딩 하면 어떨까? 라는 생각을 했다.**
+
+### 해결과정
+
+서브클래싱한 `MediaAttachment` 클래스의 위 메소드를 override 해서 `NSTextAttachmentViewProvider`에 담긴 view를 기존의 TextView에 있던 뷰를 넣어주면 매번 다시 그릴 때마다 CoreData까지 안 가도 되지 않을까 ?
+
+메모리에 올라와있는 view를 NSTextAttachmentViewProvider의 view로 넣어주면 어떨까 ?
+위 생각을 기반으로 아래와 같이 개선했다.
+
+우선 `MediaAttachment` 는 다음과 같이 멀티 미디어 View를 내부 프로퍼티로 들고 있다.
+
+그리고 멀티 미디어 커스텀 뷰가 MediaAttachable를 채택하기 때문에 view가 될 수 있다.
+
+``` swift
+final class MediaAttachment: NSTextAttachment {
+    private let view: (UIView & MediaAttachable) 
+    ...
+}
+```
+
+그리고, 위 메소드를 오버라이드한다.
+
+``` swift
+final class MediaAttachment: NSTextAttachment {
+    private let view: (UIView & MediaAttachable) 
+    
+    ...
+    
+    override func viewProvider(
+        for parentView: UIView?,
+        location: any NSTextLocation,
+        textContainer: NSTextContainer?
+    ) -> NSTextAttachmentViewProvider? {
+        let provider = MediaAttachmentViewProvider(
+            textAttachment: self,
+            parentView: parentView,
+            textLayoutManager: textContainer?.textLayoutManager,
+            location: location
+        )
+        provider.tracksTextAttachmentViewBounds = true
+        provider.view = view
+        provider.type = mediaDescription.type
+        
+        return provider
+    }
+```
+이러면 TextView의 콘텐츠 내용이 바뀌어서 Reload 될 때마다
+MediaAttachmentViewProvider가 기존 메모리에 있던 view를 그대로 띄워주는 것이기 때문에 CoreData로부터 Fetch 하는 것에 대한 최적화를 할 수 있다.
+
+즉, ViewProvider는 일종의 layout만을 잡아주는 역할을 수행하게 된다.
+
+그리고 provider가 view를 갖게 되므로 참조가 발생하지 않나 ? 라는 생각이 들었었는데,
+
+provider는 NSLayoutManager에서 뷰를 만들 때만 사용되고 이후에 사라지는 1회용이기 때문에 참조 문제도 없다.
+
+이렇게 해서 TextView Reload 최적화하기를 성공했다 !
+
+##
+
 ### 🧑‍🧑‍🧒‍🧒 집주인들
 
 <div align="center">
@@ -80,7 +188,6 @@
 |[@k2645](https://github.com/k2645)|[@kyxxn](https://github.com/kyxxn)|[@yuncheol-AHN](https://github.com/yuncheol-ahn)|[@iceHood](https://github.com/icehood)|
 
 </div>
-
 
 ##
 
