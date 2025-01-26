@@ -1,6 +1,11 @@
-## 🏠 기록소 - Memorial House
+<div align="center">
+  
+|📓 문서|[Wiki](https://github.com/boostcampwm-2024/iOS10-MemorialHouse/wiki)|[팀 노션](https://kyxxn.notion.site/iOS10-12c9adb32626806c900ad008c85e7dcc?pvs=4)|[팀 기술 블로그](https://memorial-house.tistory.com/)|[회의록](https://kyxxn.notion.site/eb52137ca8374353adbd7fb6926e99e8?pvs=4)|[기획/디자인](https://www.figma.com/design/zgxogGGouOUsshAJkPeT86/MemorialHouse?node-id=0-1&node-type=canvas&t=b4rxjLDdHgzyH6p3-0)|
+|:-:|:-:|:-:|:-:|:-:|:-:|
 
-<img width="77" alt="iOS 16.0" src="https://img.shields.io/badge/iOS-16.0+-silver"> <img width="83" alt="Xcode 16.1" src="https://img.shields.io/badge/Xcode-16.1-blue"> <img width="77" alt="Swift 6.0" src="https://img.shields.io/badge/Swift-6.0+-orange">
+</div>
+
+##
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/aab0f5d8-01b8-4d03-ab3f-9970bcca6ec3" width=900>
@@ -189,11 +194,3 @@ provider는 NSLayoutManager에서 뷰를 만들 때만 사용되고 이후에 �
 
 </div>
 
-##
-
-<div align="center">
-  
-|📓 문서|[Wiki](https://github.com/boostcampwm-2024/iOS10-MemorialHouse/wiki)|[팀 노션](https://kyxxn.notion.site/iOS10-12c9adb32626806c900ad008c85e7dcc?pvs=4)|[팀 기술 블로그](https://memorial-house.tistory.com/)|[회의록](https://kyxxn.notion.site/eb52137ca8374353adbd7fb6926e99e8?pvs=4)|[기획/디자인](https://www.figma.com/design/zgxogGGouOUsshAJkPeT86/MemorialHouse?node-id=0-1&node-type=canvas&t=b4rxjLDdHgzyH6p3-0)|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-
-</div>
